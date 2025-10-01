@@ -1,5 +1,6 @@
 <script lang="ts">
   import { Button } from "$lib/components/ui/button";
+  import { getPing } from "./data.remote";
 </script>
 
 <h1>Welcome to SvelteKit</h1>
@@ -8,3 +9,4 @@
   the documentation
 </p>
 <Button>My Button</Button>
+{(await getPing()).message}
