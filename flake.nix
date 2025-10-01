@@ -31,6 +31,7 @@
             helix.packages.${system}.default
             svelte-language-server
           ];
+          shellHook = "deno i --frozen";
         };
       }
     );
