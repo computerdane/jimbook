@@ -1,46 +1,71 @@
+[language-server.deno-lsp]
+command = "deno"
+args = ["lsp"]
+roots = ["deno.json", "deno.jsonc", "package.json"]
+
+[language-server.deno-lsp.config.deno]
+enable = true
+unstable = true
+suggest.imports.hosts = { "https://deno.land" = true }
+inlayHints.parameterNames.enabled = "all"
+inlayHints.parameterTypes.enabled = true
+inlayHints.variableTypes.enabled = true
+inlayHints.propertyDeclarationTypes.enabled  = true
+inlayHints.functionLikeReturnTypes.enabled = true
+inlayHints.enumMemberValues.enabled = true
+
 [[language]]
 name = "html"
 formatter = { command = 'deno', args = ["fmt", "-", "--ext", "html" ] }
+language-servers = ["deno-lsp"]
 auto-format = true
 
 [[language]]
 name = "css"
 formatter = { command = "deno", args = ["fmt", "-", "--ext", "css" ] }
+language-servers = ["deno-lsp"]
 auto-format = true
 
 [[language]]
 name = "javascript"
 formatter = { command = 'deno', args = ["fmt", "-", "--ext", "js" ] }
+language-servers = ["deno-lsp"]
 auto-format = true
 
 [[language]]
 name = "typescript"
 formatter = { command = 'deno', args = ["fmt", "-", "--ext", "ts" ] }
+language-servers = ["deno-lsp"]
 auto-format = true
 
 [[language]]
 name = "jsx"
 formatter = { command = 'deno', args = ["fmt", "-", "--ext", "jsx" ] }
+language-servers = ["deno-lsp"]
 auto-format = true
 
 [[language]]
 name = "tsx"
 formatter = { command = 'deno', args = ["fmt", "-", "--ext", "tsx" ] }
+language-servers = ["deno-lsp"]
 auto-format = true
 
 [[language]]
 name = "json"
 formatter = { command = 'deno', args = ["fmt", "-", "--ext", "json" ] }
+language-servers = ["deno-lsp"]
 auto-format = true
 
 [[language]]
 name = "jsonc"
 formatter = { command = 'deno', args = ["fmt", "-", "--ext", "jsonc" ] }
+language-servers = ["deno-lsp"]
 auto-format = true
 
 [[language]]
 name = "markdown"
 formatter = { command = 'deno', args = ["fmt", "-", "--ext", "md" ] }
+language-servers = ["deno-lsp"]
 auto-format = true
 
 [[language]]
